@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+
+{% include blog_header.html %}
+    
+
+
+    
+    
+ <body>
+
+<!-- Preloader Start -->
+     <div class="preloader">
+	   <div class="rounder"></div>
+      </div>
+     
+      
+      
+    
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+            	 <div class="col-md-9">
+                  <div class="col-md-12 page-body">
+                      <div class="row">
+                    		
+                            
+                            <div class="sub-title">
+                                
+                           		<h1><b>{{ page.page_title }}</b></h1>
+                                
+                               <span><p style="margin-top:-20dp;">{{ page.upload-date }}</p></span>
+                             </div>
+
+                          <div class="col-md-12 content-page">
+                            	
+                                
+                                
+                                <div class="col-md-12 blog-post">
+                                    
+
+                                    
+                                	
+     
+	 
+
+ {{  content }}
+                                
+
+                <div class="embed-responsive embed-responsive-16by9">
+                                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ page.video_link }}" borderframe=0 allowfullscreen></iframe>
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+                             <br>                     
+                                
+                                
+                               
+                       
+{% include blog_footer.html %}
+                          
+                          
+            
+
+   </body>
+ </html>

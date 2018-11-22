@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+
+
+<head>
+<!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO -->
+    <meta name="description" content="150 words">
+    <meta name="author" content="uipasta">
+    <meta name="url" content="http://www.yourdomainname.com">
+    <meta name="copyright" content="company name">
+    <meta name="robots" content="index,follow">
+    
+    
+    <title>Tkinter</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://codingprivacy.github.io/img/multiple_rename_images/favicon/logo.png">
+    <link rel="logo" sizes="144x144" type="image/x-icon" href="https://codingprivacy.github.io/img/multiple_rename_images/favicon/logo.png">
+    
+    <!-- All CSS Plugins -->
+    <link rel="stylesheet" type="text/css" href="https://codingprivacy.github.io/css/blog_plugin.css">
+    
+    <!-- Main CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://codingprivacy.github.io/css/blog_style.css">
+    
+    <!-- Google Web Fonts  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+</head>
+    
+
+
+    
+    
+ <body>
+
+<!-- Preloader Start -->
+     <div class="preloader">
+	   <div class="rounder"></div>
+      </div>
+     
+      
+      
+    
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+            	 <div class="col-md-9">
+                  <div class="col-md-12 page-body">
+                      <div class="row">
+                    		
+                            
+                            <div class="sub-title">
+                                
+                           		<h1><b>Tkinter Geometry Manager - The Pack method</b></h1>
+                                
+                               <span><p style="margin-top:-20dp;">April 7th, 2018</p></span>
+                             </div>
+
+                          <div class="col-md-12 content-page">
+                            	
+                                
+                                
+                                <div class="col-md-12 blog-post">
+                                    
+
+                                    
+                                	
+     
+	 
+
+                                     <p>With every creation of a GUI window or frame , there arises a concern for placing the widgets in the appropriate and desired place.
+                                       To settle this issue , we use the concept of <b style="color: #1abc9c;">Geometry Manager.</b>
+                                       Tkinter Geometry Manager provides us with three basic geometry managers <b style="color: #1abc9c;">pack()</b> ,
+                                        <b style="color: #1abc9c;">place()</b> and  <b style="color: #1abc9c;">grid()</b>.<br><br>
+
+                                           Prefacing with the <b style="color: #1abc9c;"> pack()</b> method , this method is a bit limited in functionalities.
+                                           When situation demands that you ought to create the widgets and place them <b style="color: #1abc9c;"> side by side</b>
+                                           or <b style="color: #1abc9c;"> on top of each other </b> then you notably use this method.
+                                           This method takes into consideration the geometry size of the window and place the widgets <b style="color: #1abc9c;">adhered to each other.</b><br><br><br>
+
+
+                                           <!--photo of the Button widget creation without pack-->
+                                           <img src="https://codingprivacy.github.io/img/tkinter2_images/Buttoncreation.JPG" alt="Button-creation"  style="border:1px solid #e8e8e8"><br><br>
+                                            The first step is the creation of any widget. We decided to apply the button widget.<br>
+                                            We construct the button using <b style="color: #1abc9c;"> tk.Button() </b> and copied it to a variable.<br>
+                                            <b style="color: #1abc9c;">Note:</b> here <b style="color: #1abc9c;"> B</b>  is uppercase.<br>
+                                            It takes number of parameters, but the <b style="color: #1abc9c;">most crucial</b> one is the
+                                            <b style="color: #1abc9c;">root window specification</b>. Root window simply means the <b style="color: #1abc9c;">window</b> where you are currently
+                                        working on , or where you desire to place the same widget. Since we are currently are in the main window ,
+                                        we passed <b  style="color: #1abc9c;"> main</b> as parameter , following which we assigned a random name to the button
+                                        using the <b style="color: #1abc9c;">text</b> attribute.
+                                        After creation of widget we straightly move to placing the widget, where the actual use of geometry manager methods sets in.<br><br><br><br>
+
+                                        <!--photo2 of the pack method with no arguments and the window showing the top-center placing of widget(side by side photo)-->
+
+                                        <img src="https://codingprivacy.github.io/img/tkinter2_images/buttonwithpack.JPG" alt="Pack-method-without-arguments"  width="450" style="border:1px solid #e8e8e8"><br><br>
+
+                                        <img src="https://codingprivacy.github.io/img/tkinter2_images/pack%20window.JPG" alt="Window result-without arguments" height="500" ><br><br>
+                                        We make use of the same variable which has been used to create the Button widget , and use the <b style="color: #1abc9c;">.pack()</b> function to place our widget.
+                                        On executing the command we will see that the widget has been placed on the <b style="color: #1abc9c;">top-center</b> of the window.<br><br>
+
+
+
+                                        To make it more flexible while placing the method with pack() , we use the attribute <b style="color: #1abc9c;">side</b>.<br>
+                                        Using this attribute we can specify the sides <b style="color: #1abc9c;"> top</b> ,<b style="color: #1abc9c;">bottom</b> ,
+                                       <b style="color: #1abc9c;">left</b> and <b style="color: #1abc9c;">right</b>.<br>
+                                       By default the widgets are placed at the <b style="color: #1abc9c;">top-center</b> of the window , if none is specified.<br><br><br>
+
+                                      <!--photo3 of pack using side with arguments of left to both the buttons and also the window showing the results(side by side photo)-->
+                                         <img src="https://codingprivacy.github.io/img/tkinter2_images/packwith2buttons.JPG" alt="Pack-method-with-2 buttons"  width="450" height="" style="border:1px solid #e8e8e8"><br><br>
+                                        <img src="https://codingprivacy.github.io/img/tkinter2_images/packwindow2buttons.JPG" alt="Window result-with2 buttons placed on left hand side" height="500" ><br><br>
+
+                                        Here, we decided to create two similar buttons , button1 and button2 and place them side by side.
+                                       Therefore, we passed the arguments <b style="color: #1abc9c;">left</b> for pack method of both the widgets.<br>
+                                       It is comprehensively noted that, the second button i.e <b style="color: #1abc9c;">button2 has been placed on the right side of the button1.</b>
+                                       
+                                        Although we have placed button2 on the left hand side , why is it that it is placed to the right side of button1?
+                                       The thing to ponder over is that,<b style="color: #1abc9c;"> in pack widget always takes the relative position with reference to the placed area of previous widget</b>.
+                                       Which means that once the button1 has been placed on the extreme left corner of the window, the next widget considers the area after button1.
+                                       This feature of pack usually is used for creating <b style="color:#1abc9c;">navigation bars.</b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                     </p><br><br>
+                                    
+                                    
+
+                             
+                                
+
+                <div class="embed-responsive embed-responsive-16by9">
+                                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QXGEEMXSaT4" borderframe=0 allowfullscreen></iframe>
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+                             <br>                     
+                                
+                                
+                               
+                       
+                       <div class="col-md-12 page-body margin-top-50 footer">
+
+  
+  
+                          <footer>
+
+                          <ul class="menu-link">
+                               <li><a href="https://codingprivacy.github.io">Home</a></li>
+
+                               <li><a href="https://codingprivacy.github.io/about">Contact</a></li>
+                            </ul>
+                            
+                          <p>© Copyright 2018 Coding Privacy. All rights reserved</p>
+						  
+						  
+						  
+
+                           
+                         </footer>
+                       </div>
+                       <!-- Footer End -->
+                     
+                     
+                  
+                
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-3">
+                        <div>
+                        <a href="https://codingprivacy.github.io">
+                          <div class="right_bar">
+                          <h3><b>Coding Privacy</b></h3>
+                          </div> 
+                        </a>
+                        </div>
+                      
+                      
+                      
+                      <div class="my-detail">
+
+                       
+                       <ul class="social-icon">
+                         <li><a href="https://github.com/codingprivacy/"  target="_blank " class="github"><i class="fa fa-github"></i></a></li>
+                         <li><a href="https://www.youtube.com/channel/UChav2OCtkA8tAVY3D7OJlcA" target="_blank"  class="youtube"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                       <div id="links">
+                           <p style="font-size: 15px;">Find more blogs:</p>
+                        </div>
+                          
+                        
+                        <div class="series-links" id="series-link" style="position: relative;">
+                            
+                            <a href="../tkinter6" target="_blank" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 6. Button widget</a><br><br>
+                            
+                            <a href="../tkinter5" target="_blank" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 5. Place method (Tkinter geometry Manager)</a><br><br>
+                            
+                            <a href="../tkinter4" target="_blank" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 4. Grid method (Tkinter geometry manager)</a><br><br>
+                            
+                            <a href="../tkinter3" target="_blank" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 3. More about Pack method (Tkinter Geometry manager)</a><br><br>
+                            
+                            <a href="../tkinter2" target="_blank" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 2. Pack method (Tkinter Geometry manager)</a><br><br>
+                            
+                            <a href="../tkinter1" target="_blank" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 1. Starting Tkinter</a><br><br>
+                            
+                            <a href="../multiple_rename" target="_blank" style="font-size: 14px; margin: 7px;">Multiple file/folder rename using Python.</a><br><br>
+                            
+                            
+                     </div>
+
+                    </div>
+
+                     
+                  </div>
+                  
+                </div>
+                  
+
+<!-- Back to Top Start -->
+            <a href="#" class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+            <!-- Back to Top End -->
+
+
+            <!-- All Javascript Plugins  -->
+            <script type="text/javascript" src="https://codingprivacy.github.io/js/blog_js/jquery.min.js"></script>
+            <script type="text/javascript" src="https://codingprivacy.github.io/js/blog_js/plugin.js"></script>
+
+            <!-- Main Javascript File  -->
+            <script type="text/javascript" src="https://codingprivacy.github.io/js/blog_js/scripts.js"></script>
+    
+    
+    
+    
+
+                          
+                          
+            
+
+   </body>
+ </html>

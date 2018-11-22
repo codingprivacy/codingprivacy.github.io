@@ -1,6 +1,7 @@
 body {
   font-size: 20px;
   color: #212529;
+  background: #fafafa;    
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
@@ -380,6 +381,8 @@ form .form-group:first-child .floating-label-form-group {
 
 footer {
   padding: 50px 0 65px;
+  
+  
 }
 
 footer .list-inline {
