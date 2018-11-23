@@ -1,4 +1,6 @@
 <!-- Main Content -->
+
+
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -21,5 +23,52 @@
 
 
         </div>
+        
+    
+    
+    <div class="col-md-3">
+                        <div>
+                        
+                          <div class="right_bar">
+                          
+                          <ul class="social-icon">
+                         <li>
+                             
+                             <a href="https://github.com/codingprivacy/"    target="_blank"><img src="{{ site.url }}/img/icons/github-sign.png">
+                             </a>
+                         </li>
+                         <li><a href="https://www.youtube.com/channel/UChav2OCtkA8tAVY3D7OJlcA" target="_blank"  ><img src="{{ site.url }}/img/icons/youtube-logo.png">
+                             </a>
+                       </li>
+                        </ul>
+                              
+                          </div> 
+                        
+                        </div>
+                      
+                      
+                      
+                      <div class="my-detail">
+
+                       
+                       
+                       
+                          <p style="font-size: 20px;margin-top: 0px; margin-bottom: -40px;"><b>Find Topics:</b></p>
+                        
+                          
+                        
+                        <div class="series-links" id="series-link" style="position: relative; margin-top: 0px; ">
+                            {% for topic in site.data.topics %}
+                            <p style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); padding: 10px;">{{ topic.name }}</p>
+                            {% endfor %}
+                            
+                     </div>
+
+                    </div>
+
+                     
+                  </div>
+ 
+    
     </div>
 </div>
