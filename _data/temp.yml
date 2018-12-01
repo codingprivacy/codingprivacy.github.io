@@ -1,0 +1,33 @@
+- title: "RemindME application"
+  description: "For non-English speakers it becomes a tough task to remember and apply the english words. Therefore I developed an application that will be helpful to strengthen our vocabulary.  Periodically,the application will pop up a window on the screen displaying random words with their appropriate meanings. The words might repeat itself after certain time. Learning is a process, where testing plays a major role too, therefore I have added a feature of quiz competition which will ask questions based on the words that have been displayed on the screen several times."
+  dev_info: 
+        "
+        
+        <pre>Harsh Patel<br></pre>
+        
+        
+        "
+  link: ""
+  
+- title: "Website Rank Finder"
+  description: "This program finds the rank of any website provided. It basically finds the rank from Google Search Engine. We deploy our websites and then sometimes it becomes really hard to know on which page it is currently, and this application is a solution to that problem. We provide our website url and it finds the rank of the website on Google search engine."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        "
+  link: ""
+  
+- title: "Linux Panel Design"
+  description: "Whenever it comes to a person using a Linux platform for the first time, it gets boring due to the lack of interactivity. To overcome that, I have experimented with the Linux Panel Design."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        "
+  link: ""
+- title: "IamHelper"
+  description: "Sometimes it becomes hectic to google every time you don't understand the meaning of a word. I have created an application that helps you to search the meaning of any word or sentence for that matter. You just need to run the application and whenever you find a word just click there, a window will pop up displaying meaning of the word along with synonym and usage of the word in a sentence."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        "
+  link: ""

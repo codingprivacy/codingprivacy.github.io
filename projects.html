@@ -3,54 +3,51 @@ layout: default
 ---
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{site.url}}/img/post-bg.jpg')">
+<header class="masthead" style="background-image: url('{{site.url}}/img/home-bg5.png')">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-heading text-center">
-          <h2>We enjoy creating new ideas, working on new creative projects.</h2>
+          <h1>Work Hard and be Kind, That is all.</h1>
         </div>
       </div>
     </div>
   </div>
 </header>
 
+
 <div class="container">
+    
     <div class="row">
+        {% for project in site.data.projects_list %}    
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            
             <div class="card" style="">
               <img class="card-img-top" src="" alt="">
               <div class="card-body">
-                <h5 class="card-title">Python Creative Codes</h5>
-                <p class="card-text">Some creative coding in Python that would enhance your learning and implementation.</p>
-                <a href="#" class="btn btn-primary">Go</a>
+                
+                  
+                  <h3 class="card-title" >{{ project.title }}</h3>
+                  
+                  
+                <p class="card-text" style="text-align: justify"> {{ project.description }}</p>
+                  <h5>Developers:</h5>
+                  <i style="text-align: center">
+                  
+                      
+                    {{ project.dev_info }}
+                  </i><br>
+                <a href={{ project.link }} class="btn btn-primary" style="align-items: center">Go</a>
+                  
               </div>
             </div>
+            <br>
         </div>
         
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="card" style="">
-              <img class="card-img-top" src="" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Python Creative Codes</h5>
-                <p class="card-text">Some creative coding in Python that would enhance your learning and implementation.</p>
-                <a href="#" class="btn btn-primary">Go</a>
-              </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="card" style="">
-              <img class="card-img-top" src="" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Python Creative Codes</h5>
-                <p class="card-text">Some creative coding in Python that would enhance your learning and implementation.</p>
-                <a href="#" class="btn btn-primary">Go</a>
-              </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+     
 </div>
 
     

@@ -1,0 +1,110 @@
+- title: "Artificial Intelligence based Feedback Portal system"
+  description: "This is a system which has been developed to operate in the current fast world we are living in. Feedbacks are necessary for improvement of any institution or organization. This system will be able to take periodic feedbacks from an educational institution using a chatbot in a human friendl way. There will be no predefined questions, the question generated will depend on the response of the user. Since the system will deal with lot of chats and emotions, sentiment analysis and natural language processing will come into the picture. Moreover, data analytics is needed to analyse and seggregate the data. Machine Learning algorithms will be needed in order to customize and prepare the chatbot."
+  dev_info: 
+        "
+        <pre>Anindita Guha<br></pre>
+        <pre>Harsh Patel<br></pre>
+        <pre>Vatsal Mistry<br></pre>
+        <pre>Nitin Lalwani<br></pre>
+        
+        "
+  link: "https://github.com/codingprivacy/Feedback-Portal-System-"
+
+- title: "Python Graphical User Interface IDE"
+  description: "Building a simple Graphical user interface might seem easy but when it comes to creating a user interface for a big project from the scratch it might start getting hectic. Graphical User Interface IDE will help you to create any interface using drag/drop methods. It is convenient yet less time consuming. Hence, we have come up with the idea of creating a User interface IDE using the programming language Python. There are certain IDE's in the market for python, but we are creating this system to overcome the downsides of the existing one's."
+  dev_info: 
+        "
+        <pre>Anindita Guha<br></pre>
+        <pre>Harsh Patel<br></pre>
+        "
+  link: "/"
+  
+- title: "Color Detect from a palette using machine learning algorithms"
+  description: "This project our ours was to create a system which would automatically detect the color from a palette or an image. There are a lot of methods in Image Processing which can directly do that, yet we designed the system from the scratch without using any high end libraries. We have trained the system using machine learning algorithms such as logistic regression. We used Matplotlib to visualise the occurence of type of color that have been detected correctly as well as incorrectly."
+  dev_info: 
+        "
+        <pre>Anindita Guha<br></pre>
+        <pre>Harsh Patel<br></pre>
+        "
+  link: "https://github.com/codingprivacy/color_detect-using-ML"
+  
+- title: "Encryption and Decryption toolkit with GUI"
+  description: "This toolkit is used for encoding and decoding certain set of instructions or sentences. There are variety of traditional ciphers such as vigenere, playfair, one time pad etc. that aids to the encryption and decyption process. The programming is done using Python language. I have developed an interactive and visualy appealing graphical user interface using Tkinter module of python."
+  dev_info: 
+        "
+        <pre>Anindita Guha<br></pre>  
+        "
+  link: "https://github.com/riyashekann/Encrypt-and-Decrypt-using-GUI."
+  
+    
+- title: "News Website"
+  description: "We have been victims of false rumours and news from unauthorized sources all over the world. We have devised a solution to create a website for news articles which will be completely showcasing the real news from authorized sources and avoid the negativity as well. We are using machine learning algorithms to fetch and detect the relevant news from collection of news and eradicate the rest. This can be eventually trained to focus and display news according to the pattern/interests of the users."
+  dev_info: 
+        "
+        <pre>Anindita Guha<br></pre>
+        <pre>Harsh Patel<br></pre>
+        
+        "
+  link: "http://104.236.77.139/responsive"
+  
+  
+    
+- title: "Automatic reminder system for International students cell(FRRO)"
+  description: "Worked on creating an automatic reminder application for various documents needed for the international students for our university. A system where students in the institution gets reminders as messages or E-mail, where the students data is to be kept updated in an excel file. Application automatically fetches the data and sends reminders everyday to the selected students."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        <pre>Vatsal Mistry<br></pre>
+        "
+  link: "https://github.com/codingprivacy/Automatic-Remider-System"
+  
+- title: "Login portal for university using Mechanize"
+  description: "We have developed a system which will be used to control the login aspect of the university portal on one click. User can add and use many login Id's one after the other automatically. It is useful in universities where every Id has specific time limit or limited data acess. We created an interactive user interface that is quite delightful to use."
+  dev_info: 
+        "
+        <pre>Anindita Guha<br></pre>
+        <pre>Harsh Patel<br></pre>
+        "
+  link: "https://github.com/codingprivacy/Login-Portal-University"
+  
+- title: "RemindME application"
+  description: "For non-English speakers it becomes a tough task to remember and apply the english words. Therefore I developed an application that will be helpful to strengthen our vocabulary.  Periodically,the application will pop up a window on the screen displaying random words with their appropriate meanings. The words might repeat itself after certain time. Learning is a process, where testing plays a major role too, therefore I have added a feature of quiz competition which will ask questions based on the words that have been displayed on the screen several times."
+  dev_info: 
+        "
+        
+        <pre>Harsh Patel<br></pre>
+        
+        
+        "
+  link: "https://github.com/Harshpatel44/RemindMe"
+  
+- title: "Website Rank Finder"
+  description: "This program finds the rank of any website provided. It basically finds the rank from Google Search Engine. We deploy our websites and then sometimes it becomes really hard to know on which page it is currently, and this application is a solution to that problem. We provide our website url and it finds the rank of the website on Google search engine."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        "
+  link: "https://github.com/Harshpatel44/website-rank-finder"
+  
+- title: "Linux Panel Design"
+  description: "Whenever it comes to a person using a Linux platform for the first time, it gets boring due to the lack of interactivity. To overcome that, I have experimented with the Linux Panel Design."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        "
+  link: "https://github.com/Harshpatel44/Linux-Panel-Design"
+- title: "IamHelper"
+  description: "Sometimes it becomes hectic to google every time you don't understand the meaning of a word. I have created an application that helps you to search the meaning of any word or sentence for that matter. You just need to run the application and whenever you find a word just click there, a window will pop up displaying meaning of the word along with synonym and usage of the word in a sentence."
+  dev_info: 
+        "
+        <pre>Harsh Patel<br></pre>
+        "
+  link: "https://github.com/Harshpatel44/IAmHelper"
+  
+- title: "Data Transfer Application for Computers"
+  description: "We have all heard and used bluetooth and other applications such as 'xender' and 'Share It' for transferring our files to other mobiles of PC. We go through the trouble of pendrives to transfer PC to PC. Hence we have devised an application using socket programming which will aid in transferring of files and communication between two computer easily."
+  dev_info:
+        "
+        <pre>Anindita Guha</pre>
+        "
+  link: "https://github.com/riyashekann/Data-transfer-app"
