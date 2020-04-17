@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+
+
+<head>
+<!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO -->
+    <meta name="description" content="150 words">
+    <meta name="author" content="uipasta">
+    <meta name="url" content="http://www.yourdomainname.com">
+    <meta name="copyright" content="company name">
+    <meta name="robots" content="index,follow">
+    
+    
+    <title>Feedforward Neural Networks - A simple introduction</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://localhost:4000/img/favicon.png">
+    <link rel="logo" sizes="144x144" type="image/x-icon" href="http://localhost:4000/img/favicon.png">
+    
+    <!-- All CSS Plugins -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/css/blog_plugin.css">
+    
+    <!-- Main CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/css/blog_style.css">
+    
+    <!-- Google Web Fonts  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
+</head>
+    
+
+
+    
+    
+ <body>
+
+<!-- Preloader Start -->
+     <div class="preloader">
+	   <div class="rounder"></div>
+      </div>
+     
+      
+      
+    
+    
+    <div id="main">
+        <div class="container">
+            <div class="row">
+            	 <div class="col-md-9">
+                  <div class="col-md-12 page-body">
+                      <div class="row">
+                    		
+                            
+                            <div class="sub-title">
+                                
+                           		<h1><b>Feedforward Neural Networks - A simple introduction</b></h1>
+                                
+                               <span><p >April 20th, 2020</p></span>
+                               <p >Harsh Patel</p>
+                             </div>
+
+                          <div class="col-md-12 content-page">
+                            	
+                                
+                                
+                                <div class="col-md-12 blog-post">
+                                    
+
+                                    
+                                	
+     
+	 
+
+ <p>Hello People, in this blog I will explain to you about feedforward neural networks. There are a lot of technical terms and jargon involved but understanding this concept is very important in a Neural Network, hence I would use the simplest language and easiest possible examples.</p>
+
+<div>
+    <h2><b>Neural Networks</b></h2>
+    <p>A neural network is many neurons interconnected with each other. Each neuron performs small and simple functions but in aggregation, they do some very useful tasks. They are based on how human brains work, and their fundamental task is to recognize patterns. </p>
+
+    <h2><b>Feedforward Neural Network</b></h2>
+    <p><b  style="color: #1abc9c;">Feedforward Neural Network</b> is the simplest neural network. It is called Feedforward because information flows forward from Inputs -> hidden layers -> outputs. There are no feedback connections. The model feeds every output to the next layers and keeps moving forward.</p>
+
+    <p>There is another type of neural network where the output of the model is fed to itself is called <b  style="color: #1abc9c;">recurrent neural networks</b>.</p>
+    <center>
+        <img src="http://localhost:4000/img/feedforward/architecture.PNG" class="img-responsive" height="350" width="650" align="center">
+    </center>
+          
+    <p>This is a higher-level architecture of a single neural network. The input layer contains our input data which have information to predict the output. Data gets manipulated and different mathematical operations take place when it travels through hidden layers and to the output. The output provides the predicted value. Each layer has several neurons which are called units.</p>
+
+    <center>
+       <img src="http://localhost:4000/img/feedforward/simple_feedforward.PNG" class="img-responsive" height="350" width="650" align="center">
+    </center>
+
+    <p>This is an example of a simple feedforward neural network. The leftmost layer is the input layer, the middle layer is the hidden layer and last is the output layer. It is a single layer hidden layer network with 2 hidden units. Hidden layers and units can be increased based on the requirements. </p>
+
+    <h2>Dataset</h2>
+    <p>We take a small dataset as an example. The dataset contains information about candidates who applied for a job and we also have data of their job offer results i.e. they got a job offer or not.</p>
+
+    <center>
+               <img src="http://localhost:4000/img/feedforward/dataset.PNG" class="img-responsive" align="center">
+    </center>
+    <br>
+    <p>Here X1, X2, and  X3 are called <b style="color: #1abc9c;">features</b>. In Machine Learning, there needs to be a balance of the number of features as more features would lead to overfitting and fewer features would lead to underfitting.</p>
+
+    <center>
+        <img src="http://localhost:4000/img/feedforward/output.PNG" class="img-responsive">
+    </center>
+    <br>
+    <p>This is the result of the candidates. 1st and 4th got an offer and others did not. So now using this dataset, we want to predict if a new candidate has certain skills, will he get a job offer or not. Hence this data that we have is the training data.</p>
+
+    <h2>Algorithm</h2>
+
+     <center>
+         <img src="http://localhost:4000/img/feedforward/real_feedforward.PNG" class="img-responsive" >
+    </center>
+              
+     
+
+    <p>This image shows the working of a simple feedforward neural network.</p>
+
+    <h3>Notations </h3>
+    X = Input data<br>
+    W = Weights <br>
+    B = Bias<br>
+    σ = Activation function<br>
+
+    <h3>Working of the network</h3>
+
+    <center>
+        <img src="http://localhost:4000/img/feedforward/Z.PNG" class="img-responsive">
+    
+    </center>
+    <br>          
+    s
+    <div style=" margin-left: 15px">
+        <p><b>• </b>As X is the input, it is a vector of shape (4 x 3) based on our dataset. Here 4 contains the number of rows ( number of data ) and 3  contains the number of features. Hence in general shape of  <b  style="color: #1abc9c;">X = [number_of_data] x [features]</b>.</p>
+        <p><b>• </b>The shape of W = (3 x 2) as 3 is the number of features of data and 2 is the next hidden layer units. Hence generalized shape of <b  style="color: #1abc9c;">W = [features] x [next_layer_units]</b>.</p>
+        <p><b>• </b>Hence shape of dot product of <b  style="color: #1abc9c;">W.X = (4x2)</b> as  (4x3).(3x2) -> (4x2)</p>
+        <p><b>• </b>B1 is a bias that is required so that our network stays unbiased to any prediction. B is a single column vector containing each data as the row. Hence the shape would be (4x1).</p>
+    </div>
+    
+    
+    <p>Generally, <b  style="color: #1abc9c;">W is initialized with random weights</b> between (0-1)  or (-1,1). You can initialize it with any other value. The initial value of W may affect the result or other parameters like the required number of iterations. Weights are created to maintain how much proportion of each feature of the dataset is important for prediction. Weights are assigned values accordingly. We shall discuss this further after the algorithm. Same way B is generally initialized with all 1 values. </p>
+    
+    <center>
+        <img src="http://localhost:4000/img/feedforward/H.PNG" class="img-responsive">
+    </center>
+              
+    
+    <br>
+    <p>After we get the value of Z1, <b  style="color: #1abc9c;">we pass it to an activation function (σ)</b> . There are many different activation functions whose purpose is to decide whether a neuron or a unit should be activated or not. It's also used to introduce non-linearity to the output of the neuron. We will take sigmoid as an activation function. Its formula is  ex / (1 + e-x).  Hence σ(Z1) gives us a result of the sigmoid function i.e. H1 = σ(Z1).</p> 
+    
+    <p>We have computed everything for the hidden layer. Now H1 is taken as an input for the next layer and all the same, computations are performed. The 1 in the subscript indicates all the variables for the 1st hidden layer. The equation for output layer which is the next layer would be:</p>
+
+    <center>
+        <img src="http://localhost:4000/img/feedforward/Y.PNG" class="img-responsive">
+    </center>
+              
+    
+    <br>
+    <p>As you can see, we calculated Z2 taking H1 as the input of the output layer i.e H1 becomes X here. Then we pass it to the sigmoid function to get Y which is the output of our network. This is the full working of the feedforward network. As our network has only one neuron in the output layer, <b  style="color: #1abc9c;">the output vector would be (4 x 1)</b>.</p>
+
+
+
+
+
+
+    <h2>Loss</h2>
+    <p>After training the network we test our network using testing data and its labels(results). We test it based on its error rate % or loss. There are different types of loss functions. One of them is <b  style="color: #1abc9c;">mean square error</b> which is:</p>
+    <center>
+        <img src="http://localhost:4000/img/feedforward/mse.PNG" class="img-responsive">
+    </center>
+              
+    <br>
+    <p>Where y is the output of the network (predicted value) and t is the true value of the data.</p>
+
+
+
+
+
+
+    <h2>Conclusion</h2>
+    <p>As mentioned earlier, <b  style="color: #1abc9c;">weights are used to maintain how much priority to give to each feature and how much proportion of each feature takes part in the prediction</b>. As we have initialized weights with random values, which are not ideal and do not know which features are of how much importance. We need to set our weights value based on this requirement. We do not know the value of ideal weights, for which we use an <b  style="color: #1abc9c;">algorithm call backpropagation. It propagates from backward and updates weights on every iteration based on loss of the network.</b></p>
+    <br><p>
+        During training, All these calculations happen for N number of iterations. <b  style="color: #1abc9c;">In each iteration, Y is calculated using feedforward, a loss is calculated, and backpropagation happens which updates the weights. </b>In the next iteration, everything is calculated based on the updated weights. Hence weights keep updating in each iteration leading to better accuracy for prediction.
+    </p>
+</div>
+
+                                
+
+               
+
+                                    
+
+                                </div>
+                            </div>
+                             <br>                     
+                                
+                                
+                               
+                       
+                       <div class="col-md-12 page-body margin-top-50 footer">
+
+  
+  
+                          <footer>
+
+                          <ul class="menu-link">
+                               <li><a href="https://codingprivacy.github.io">Home</a></li>
+
+                               <li><a href="http://localhost:4000/about">Contact</a></li>
+                            </ul>
+                            
+                          <p>© Copyright 2018 Coding Privacy. All rights reserved</p>
+						  
+						  
+						  
+
+                           
+                         </footer>
+                       </div>
+                       <!-- Footer End -->
+                     
+                     
+                  
+                
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-3">
+                        <div>
+                        <a href="https://codingprivacy.github.io">
+                          <div class="right_bar">
+                          <h3><b>CodingPrivacy</b></h3>
+                          </div> 
+                        </a>
+                        </div>
+                      
+                      
+                      
+                      <div class="my-detail">
+
+                       
+                       <ul class="social-icon">
+                         <li>
+                             
+                             <a href="https://github.com/codingprivacy/"><img src="http://localhost:4000/img/icons/github-sign.png">
+                             </a>
+                         </li>
+                         <li><a href="https://www.youtube.com/channel/UChav2OCtkA8tAVY3D7OJlcA" ><img src="http://localhost:4000/img/icons/youtube-logo.png">
+                             </a>
+                       </li>
+                        </ul>
+                       <div id="links">
+                           <p style="font-size: 15px;">Find more blogs:</p>
+                        </div>
+                          
+                        
+                        <div class="series-links" id="series-link" style="position: relative;">
+                            
+<!--                                -->
+                            <a href="../feedforward_net_ML" style="font-size: 14px; margin: 7px;">Feedforward Neural Network - A Simple Introduction</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../tkinter6" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 6. Button widget</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../tkinter5" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 5. Place method (Tkinter geometry Manager)</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../tkinter4" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 4. Grid method (Tkinter geometry manager)</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../tkinter3" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 3. More about Pack method (Tkinter Geometry manager)</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../tkinter2" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 2. Pack method (Tkinter Geometry manager)</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../tkinter1" style="font-size: 14px; margin: 7px;">GUI Developement Using Python - 1. Starting Tkinter</a><br><br>
+<!--                                -->
+                            
+<!--                                -->
+                            <a href="../multiple_rename" style="font-size: 14px; margin: 7px;">Multiple file/folder rename using Python.</a><br><br>
+<!--                                -->
+                            
+                            
+                     </div>
+
+                    </div>
+
+                     
+                  </div>
+                  
+                </div>
+                  
+
+<!-- Back to Top Start -->
+            <a href="#" class="scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+            <!-- Back to Top End -->
+
+
+            <!-- All Javascript Plugins  -->
+            <script type="text/javascript" src="http://localhost:4000/js/blog_js/jquery.min.js"></script>
+            <script type="text/javascript" src="http://localhost:4000/js/blog_js/plugin.js"></script>
+
+            <!-- Main Javascript File  -->
+            <script type="text/javascript" src="http://localhost:4000/js/blog_js/scripts.js"></script>
+    
+    
+    
+    
+
+                          
+                          
+            
+
+   </body>
+ </html>

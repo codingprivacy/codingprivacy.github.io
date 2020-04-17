@@ -1,4 +1,7 @@
 - name: "GUI developement using Python"
-  link: ""
+  link: "blogs/tkinter1"
 - name: "Multiple Rename Python"
-  link: ""
+  link: "blogs/multiple_rename"
+- name: "Machine Learning"
+  link: "blogs/feedforward_net_ML"
+  
