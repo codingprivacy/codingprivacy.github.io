@@ -148,7 +148,6 @@
     <p>Generally, <b  style="color: #1abc9c;">\(W\) is initialized with random weights</b> between \( (0,1) \) or \( (-1,1) \). You can initialize it with any other value. The initial value of \(W\) may affect the result or other parameters like the required number of iterations. Weights are created to maintain how much proportion of each feature of the dataset is important for prediction. Weights are assigned values accordingly. We shall discuss this further after the algorithm. Same way \(B\) is generally initialized with all \(1\) values. </p>
     
     <center>
-        <img src="http://localhost:4000/img/feedforward/H.PNG" class="img-responsive">
         <h3>$$ H_1 = \sigma(Z_1) $$</h3>
     </center>
               
@@ -159,7 +158,6 @@
     <p>We have computed everything for the hidden layer. Now \(H_1\) is taken as an input for the next layer and all the same, computations are performed. The \(1\) in the subscript indicates all the variables for the 1st hidden layer. The equation for output layer which is the next layer would be:</p>
 
     <center>
-        <img src="http://localhost:4000/img/feedforward/Y.PNG" class="img-responsive">
         <h3>$$ Z_2 = W_1 \cdot H_1 + B_2 $$</h3>
         <h3>$$ Y = \sigma(Z_2) $$</h3>
     </center>
@@ -176,7 +174,7 @@
     <h2>Loss</h2>
     <p>After training the network we test our network using testing data and its labels(results). We test it based on its error rate % or loss. There are different types of loss functions. One of them is <b  style="color: #1abc9c;">mean square error</b> which is:</p>
     <center>
-        <img src="http://localhost:4000/img/feedforward/mse.PNG" class="img-responsive">
+        <h3>$$ MSE = \frac{1}{N} \sum_{i=0}^N {y-t}^2 $$</h3>
     </center>
               
     <br>
