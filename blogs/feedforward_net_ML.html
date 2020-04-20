@@ -62,38 +62,37 @@ author: "Harsh Patel"
     <h3>Working of the network</h3>
 
     <center>
-        <img src="{{ site.url }}/img/feedforward/Z.PNG" class="img-responsive">
-    
+        <h3>$$ Z_1 = W_0 \cdot X + B_1 $$</h3>
     </center>
     <br>          
-    s
     <div style=" margin-left: 15px">
-        <p><b>• </b>As X is the input, it is a vector of shape (4 x 3) based on our dataset. Here 4 contains the number of rows ( number of data ) and 3  contains the number of features. Hence in general shape of  <b  style="color: #1abc9c;">X = [number_of_data] x [features]</b>.</p>
-        <p><b>• </b>The shape of W = (3 x 2) as 3 is the number of features of data and 2 is the next hidden layer units. Hence generalized shape of <b  style="color: #1abc9c;">W = [features] x [next_layer_units]</b>.</p>
-        <p><b>• </b>Hence shape of dot product of <b  style="color: #1abc9c;">W.X = (4x2)</b> as  (4x3).(3x2) -> (4x2)</p>
-        <p><b>• </b>B1 is a bias that is required so that our network stays unbiased to any prediction. B is a single column vector containing each data as the row. Hence the shape would be (4x1).</p>
+        <p><b>• </b>As \(X\) is the input, it is a vector of shape \( (4 \times 3) \) based on our dataset. Here \(4\) contains the number of rows ( number of data ) and 3  contains the number of features. Hence in general shape of  <b  style="color: #1abc9c;">\( X = [\text{number of data}] \times [\text{features}] \)</b>.</p>
+        <p><b>• </b>The shape of \(W = (3 \times 2) \) as 3 is the number of features of data and 2 is the next hidden layer units. The generalized shape of \( W = [\text{features}] \times [\text{next layer units}] \).</p>
+        <p><b>• </b>Hence shape of dot product \(W \cdot X = (4 \times 2)\) i.e \( (4 \times 3) \cdot (3 \times 2) \to (4 \times 2) \)</p>
+        <p><b>• </b>\(B_1\) is a bias that is required so that our network stays unbiased to any prediction. B is a single column vector containing each data as the row. Hence the shape would be \( (4 \times 1) \).</p>
     </div>
     
     
-    <p>Generally, <b  style="color: #1abc9c;">W is initialized with random weights</b> between (0-1)  or (-1,1). You can initialize it with any other value. The initial value of W may affect the result or other parameters like the required number of iterations. Weights are created to maintain how much proportion of each feature of the dataset is important for prediction. Weights are assigned values accordingly. We shall discuss this further after the algorithm. Same way B is generally initialized with all 1 values. </p>
+    <p>Generally, <b  style="color: #1abc9c;">\(W\) is initialized with random weights</b> between \( (0,1) \) or \( (-1,1) \). You can initialize it with any other value. The initial value of \(W\) may affect the result or other parameters like the required number of iterations. Weights are created to maintain how much proportion of each feature of the dataset is important for prediction. Weights are assigned values accordingly. We shall discuss this further after the algorithm. Same way \(B\) is generally initialized with all \(1\) values. </p>
     
     <center>
-        <img src="{{ site.url }}/img/feedforward/H.PNG" class="img-responsive">
+        <h3>$$ H_1 = \sigma(Z_1) $$</h3>
     </center>
               
     
     <br>
-    <p>After we get the value of Z1, <b  style="color: #1abc9c;">we pass it to an activation function (σ)</b> . There are many different activation functions whose purpose is to decide whether a neuron or a unit should be activated or not. It's also used to introduce non-linearity to the output of the neuron. We will take sigmoid as an activation function. Its formula is  ex / (1 + e-x).  Hence σ(Z1) gives us a result of the sigmoid function i.e. H1 = σ(Z1).</p> 
+    <p>After we get the value of \(Z_1\), <b  style="color: #1abc9c;">we pass it to an activation function \( \sigma \)</b> . There are many different activation functions whose purpose is to decide whether a neuron or a unit should be activated or not. It's also used to introduce non-linearity to the output of the neuron. We will take sigmoid as an activation function. Its formula is  \( \frac{e^x}{(1 + e^{-x})} \).  Hence \( \sigma (Z_1) \) gives us a result of the sigmoid function i.e. \( H_1 = \sigma (Z_1) \).</p> 
     
-    <p>We have computed everything for the hidden layer. Now H1 is taken as an input for the next layer and all the same, computations are performed. The 1 in the subscript indicates all the variables for the 1st hidden layer. The equation for output layer which is the next layer would be:</p>
+    <p>We have computed everything for the hidden layer. Now \(H_1\) is taken as an input for the next layer and all the same, computations are performed. The \(1\) in the subscript indicates all the variables for the 1st hidden layer. The equation for output layer which is the next layer would be:</p>
 
     <center>
-        <img src="{{ site.url }}/img/feedforward/Y.PNG" class="img-responsive">
+        <h3>$$ Z_2 = W_1 \cdot H_1 + B_2 $$</h3>
+        <h3>$$ Y = \sigma(Z_2) $$</h3>
     </center>
               
     
     <br>
-    <p>As you can see, we calculated Z2 taking H1 as the input of the output layer i.e H1 becomes X here. Then we pass it to the sigmoid function to get Y which is the output of our network. This is the full working of the feedforward network. As our network has only one neuron in the output layer, <b  style="color: #1abc9c;">the output vector would be (4 x 1)</b>.</p>
+    <p>As you can see, we calculated \(Z_2\) taking \(H_1\) as the input of the output layer i.e \(H_1\) becomes \(X\) here. Then we pass it to the sigmoid function to get \(Y\) which is the output of our network. This is the full working of the feedforward network. As our network has only one neuron in the output layer, the <b  style="color: #1abc9c;">output vector </b>would be \((4 \times 1)\).</p>
 
 
 
@@ -103,11 +102,11 @@ author: "Harsh Patel"
     <h2>Loss</h2>
     <p>After training the network we test our network using testing data and its labels(results). We test it based on its error rate % or loss. There are different types of loss functions. One of them is <b  style="color: #1abc9c;">mean square error</b> which is:</p>
     <center>
-        <img src="{{ site.url }}/img/feedforward/mse.PNG" class="img-responsive">
+        <h3>$$ MSE = \frac{1}{N} \sum_{i=0}^N {{y-t}^2} $$</h3>
     </center>
               
     <br>
-    <p>Where y is the output of the network (predicted value) and t is the true value of the data.</p>
+    <p>Where \(y\) is the output of the network (predicted value) and \(t\) is the true value of the data.</p>
 
 
 
@@ -115,8 +114,8 @@ author: "Harsh Patel"
 
 
     <h2>Conclusion</h2>
-    <p>As mentioned earlier, <b  style="color: #1abc9c;">weights are used to maintain how much priority to give to each feature and how much proportion of each feature takes part in the prediction</b>. As we have initialized weights with random values, which are not ideal and do not know which features are of how much importance. We need to set our weights value based on this requirement. We do not know the value of ideal weights, for which we use an <b  style="color: #1abc9c;">algorithm call backpropagation. It propagates from backward and updates weights on every iteration based on loss of the network.</b></p>
+    <p>As mentioned earlier, <b  style="color: #1abc9c;">weights are used to maintain how much priority to give to each feature and how much proportion of each feature takes part in the prediction</b>. As we have initialized weights with random values, which are not ideal and do not know which features are of how much importance. We need to set our weights value based on this requirement. We do not know the value of ideal weights, for which we use an algorithm call backpropagation. It propagates from backward and updates weights on every iteration based on loss of the network.</p>
     <br><p>
-        During training, All these calculations happen for N number of iterations. <b  style="color: #1abc9c;">In each iteration, Y is calculated using feedforward, a loss is calculated, and backpropagation happens which updates the weights. </b>In the next iteration, everything is calculated based on the updated weights. Hence weights keep updating in each iteration leading to better accuracy for prediction.
+        During training, All these calculations happen for \(N\) number of iterations. <b  style="color: #1abc9c;">In each iteration, \(Y\) is calculated using feedforward, a loss is calculated, and backpropagation updates the weights. </b>In the next iteration, everything is calculated based on the updated weights. Hence weights keep updating in each iteration leading to better accuracy for prediction.
     </p>
 </div>
