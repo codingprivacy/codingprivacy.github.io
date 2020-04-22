@@ -1,8 +1,8 @@
 ---
 layout: "blog_layout"
-web_title: "Feedforward Neural Networks - A simple introduction"
-page_title: "Feedforward Neural Networks - A simple introduction"
-upload-date: "April 20th, 2020"
+web_title: "Feedforward propagation - A Simple Introduction to neural networks"
+page_title: "Feedforward propagation - A Simple Introduction to neural networks"
+upload-date: "April 16, 2020"
 author: "Harsh Patel"
 ---
 
@@ -18,14 +18,16 @@ author: "Harsh Patel"
     <p>There is another type of neural network where the output of the model is fed to itself is called <b  style="color: #1abc9c;">recurrent neural networks</b>.</p>
     <center>
         <img src="{{ site.url }}/img/feedforward/architecture.PNG" class="img-responsive" height="350" width="650" align="center">
+        <caption>figure 1. Architecture of neural network</caption>
     </center>
-          
+    <br>
     <p>This is a higher-level architecture of a single neural network. The input layer contains our input data which have information to predict the output. Data gets manipulated and different mathematical operations take place when it travels through hidden layers and to the output. The output provides the predicted value. Each layer has several neurons which are called units.</p>
 
     <center>
        <img src="{{ site.url }}/img/feedforward/simple_feedforward.PNG" class="img-responsive" height="350" width="650" align="center">
+        <caption>figure 2. Simple neural network</caption>
     </center>
-
+    <br>
     <p>This is an example of a simple feedforward neural network. The leftmost layer is the input layer, the middle layer is the hidden layer and last is the output layer. It is a single layer hidden layer network with 2 hidden units. Hidden layers and units can be increased based on the requirements. </p>
 
     <h2>Dataset</h2>
@@ -33,24 +35,26 @@ author: "Harsh Patel"
 
     <center>
                <img src="{{ site.url }}/img/feedforward/dataset.PNG" class="img-responsive" align="center">
+                <caption>table 1. Given data</caption>
     </center>
     <br>
     <p>Here X1, X2, and  X3 are called <b style="color: #1abc9c;">features</b>. In Machine Learning, there needs to be a balance of the number of features as more features would lead to overfitting and fewer features would lead to underfitting.</p>
 
     <center>
         <img src="{{ site.url }}/img/feedforward/output.PNG" class="img-responsive">
+        <caption>table 2. True value of given data</caption>
     </center>
     <br>
     <p>This is the result of the candidates. 1st and 4th got an offer and others did not. So now using this dataset, we want to predict if a new candidate has certain skills, will he get a job offer or not. Hence this data that we have is the training data.</p>
 
-    <h2>Algorithm</h2>
-
+    <h2>Algorithm</h2><br>
      <center>
          <img src="{{ site.url }}/img/feedforward/real_feedforward.PNG" class="img-responsive" >
+         <caption>figure 3. Feedforward propagation on single layer network</caption>
     </center>
               
      
-
+    <br>
     <p>This image shows the working of a simple feedforward neural network.</p>
 
     <h3>Notations </h3>
@@ -62,51 +66,56 @@ author: "Harsh Patel"
     <h3>Working of the network</h3>
 
     <center>
-        <h3>$$ Z_1 = W_0 \cdot X + B_1 $$</h3>
+        <h3>$$ Z_1 = X \cdot W_1 + B_1 $$</h3>
     </center>
     <br>          
     <div style=" margin-left: 15px">
         <p><b>• </b>As \(X\) is the input, it is a vector of shape \( (4 \times 3) \) based on our dataset. Here \(4\) contains the number of rows ( number of data ) and 3  contains the number of features. Hence in general shape of  <b  style="color: #1abc9c;">\( X = [\text{number of data}] \times [\text{features}] \)</b>.</p>
-        <p><b>• </b>The shape of \(W = (3 \times 2) \) as 3 is the number of features of data and 2 is the next hidden layer units. The generalized shape of \( W = [\text{features}] \times [\text{next layer units}] \).</p>
-        <p><b>• </b>Hence shape of dot product \(W \cdot X = (4 \times 2)\) i.e \( (4 \times 3) \cdot (3 \times 2) \to (4 \times 2) \)</p>
-        <p><b>• </b>\(B_1\) is a bias that is required so that our network stays unbiased to any prediction. B is a single column vector containing each data as the row. Hence the shape would be \( (4 \times 1) \).</p>
+        <p><b>• </b>The shape of \(W_1 = (3 \times 2) \) as 3 is the number of features of data and 2 is the next hidden layer units. The generalized shape of \( W_1 = [\text{features}] \times [\text{next layer units}] \).</p>
+        <p><b>• </b>Hence shape of dot product \(X \cdot W_1 = (4 \times 2)\) i.e \( (4 \times 3) \cdot (3 \times 2) \to (4 \times 2) \)</p>
+        <p><b>• </b>\(B_1\) is a bias that is required so that our network stays unbiased to any prediction. B is a single column vector containing bias for each neuron of the layer. Hence the shape would be \( (1 \times 2) \).</p>
     </div>
     
     
-    <p>Generally, <b  style="color: #1abc9c;">\(W\) is initialized with random weights</b> between \( (0,1) \) or \( (-1,1) \). You can initialize it with any other value. The initial value of \(W\) may affect the result or other parameters like the required number of iterations. Weights are created to maintain how much proportion of each feature of the dataset is important for prediction. Weights are assigned values accordingly. We shall discuss this further after the algorithm. Same way \(B\) is generally initialized with all \(1\) values. </p>
+    <p>Generally, weights are initialized with random weights between \( (0,1) \) or \( (-1,1) \). You can initialize it with any other value. The initial value of \(W\) may affect the result or other parameters like the required number of iterations. Weights are created to maintain how much proportion of each feature of the dataset is important for prediction. Weights are assigned values accordingly. We shall discuss this further after the algorithm. Same way bias is generally initialized with all \(1\) values. </p>
     
     <center>
         <h3>$$ H_1 = \sigma(Z_1) $$</h3>
     </center>
               
-    
     <br>
-    <p>After we get the value of \(Z_1\), <b  style="color: #1abc9c;">we pass it to an activation function \( \sigma \)</b> . There are many different activation functions whose purpose is to decide whether a neuron or a unit should be activated or not. It's also used to introduce non-linearity to the output of the neuron. We will take sigmoid as an activation function. Its formula is  \( \frac{e^x}{(1 + e^{-x})} \).  Hence \( \sigma (Z_1) \) gives us a result of the sigmoid function i.e. \( H_1 = \sigma (Z_1) \).</p> 
+    <p>After we get the value of \(Z_1\), we pass it to the activation function. There are many different activation functions whose purpose is to decide whether a neuron or a unit should be activated or not. It's also used to introduce non-linearity to the output of the neuron. We will take sigmoid as an activation function. Its formula is  \( \frac{e^x}{(1 + e^{-x})} \).  Hence \( \sigma (Z_1) \) gives us a result of the sigmoid function i.e. \( H_1 = \sigma (Z_1) \).</p> 
     
-    <p>We have computed everything for the hidden layer. Now \(H_1\) is taken as an input for the next layer and all the same, computations are performed. The \(1\) in the subscript indicates all the variables for the 1st hidden layer. The equation for output layer which is the next layer would be:</p>
+        <center>
+            <h3>$$ Z_2 = H_1 \cdot W_2 + B_2 $$</h3>
+            <h3>$$ Y = \sigma(Z_2) $$</h3>
+        </center>
+    
+     <p>As you can see, we calculated \(Z_2\) taking \(H_1\) as the input of the output layer i.e \(H_1\) becomes \(X\) here. The shape of \(H_1\) is \(4 \times 2\) and \(W_2\) is \(2 \times 1\). \(B_2\) is now \(1 \times 1\). Then we pass \(Z_2\)  to the sigmoid function to get \(Y\) which is the predicted output of our network. This is the full working of the feedforward network. As our network has only one neuron in the output layer, the <b  style="color: #1abc9c;">output vector </b>would be \((4 \times 1)\).</p>
 
+    <h2>2 layer network</h2><br>
+    <p>As we saw feedforward propagation on single layer network, now lets see the algorithm for 2 layer network. This will give you better idea on how the network can be expanded and calculated.</p>
     <center>
-        <h3>$$ Z_2 = W_1 \cdot H_1 + B_2 $$</h3>
-        <h3>$$ Y = \sigma(Z_2) $$</h3>
+         <img src="{{ site.url }}/img/feedforward/feedforward2.PNG" class="img-responsive" >
+        <caption>figure 4. Feedforward propagation on 2 layer network</caption>
     </center>
-              
-    
     <br>
-    <p>As you can see, we calculated \(Z_2\) taking \(H_1\) as the input of the output layer i.e \(H_1\) becomes \(X\) here. Then we pass it to the sigmoid function to get \(Y\) which is the output of our network. This is the full working of the feedforward network. As our network has only one neuron in the output layer, the <b  style="color: #1abc9c;">output vector </b>would be \((4 \times 1)\).</p>
-
-
-
-
-
-
+    
+    <h3>$$ Z_1 = X \cdot W_1 + B_1 $$</h3>
+    <h3>$$ H_1 = \sigma(Z_1) $$</h3>
+    <h3>$$ Z_2 = H_1 \cdot W_2 + B_2 $$</h3>
+    <h3>$$ H_2 = \sigma(Z_2) $$</h3>
+    <h3>$$ Z_3 = H_2 \cdot W_3 + B_3 $$</h3>
+    <h3>$$ Y = \sigma(Z_3) $$</h3>
+    
     <h2>Loss</h2>
     <p>After training the network we test our network using testing data and its labels(results). We test it based on its error rate % or loss. There are different types of loss functions. One of them is <b  style="color: #1abc9c;">mean square error</b> which is:</p>
     <center>
-        <h3>$$ MSE = \frac{1}{N} \sum_{i=0}^N {y-t}^2 $$</h3>
+        <h3>$$ MSE = \frac{1}{N} \sum_{i=0}^{N} (Y-T)^{2} $$</h3>
     </center>
               
     <br>
-    <p>Where \(y\) is the output of the network (predicted value) and \(t\) is the true value of the data.</p>
+    <p>Where \(Y\) is the output of the network (predicted value) and \(T\) is the true value of the data.</p>
 
 
 
