@@ -62,7 +62,7 @@
                                 
                            		<h1><b>Backpropagation - A pillar of neural networks</b></h1>
                                 
-                               <span><p >April 21, 2020</p></span>
+                               <span><p >April 22, 2020</p></span>
                                <p >Harsh Patel</p>
                              </div>
 
@@ -78,7 +78,7 @@
      
 	 
 
- <p>Hello people, this blog is about the backpropagation algorithm used in Machine learning. It is one of the most important algorithms and can be described as the pillar of the neural networks. I tried to make it as simple as possible, so I am sure you would be able to understand the fundamental working of backpropagation after reading this post.</p>
+ <p>Hello people, this blog is about the backpropagation algorithm used in Machine learning. It is one of the most important algorithms and can be described as the pillar of the neural networks. I tried to make it as simple as possible, so I am sure you would be able to understand the fundamental working of backpropagation after reading this blog.</p>
 <br>
 <h2>Overview</h2>
 <p>As we have seen in the last post that during training, Neural networks undergo feedforward and backpropagation mechanism. Data moves from input to output i.e. first layer to the last layer in feedforward mechanism and then we start backward and move from right to left to again first layer in backpropagation. The main purpose of backpropagation is that we update other parameters of the network with a change in a loss. </p>
@@ -267,8 +267,15 @@ $$ \frac{\partial L}{\partial W_k} = (Y - T) \times \sigma'(Z_n) \times X \times
 <h2>Some depth</h2>
 <p>
 This \( \frac{\partial L}{\partial W_n} \)  and \( \frac{\partial L}{\partial B_n} \) are the gradients of the networks.
-Mathematically these gradients are vectors that move in a specific direction to reduce the loss of the network. If we suppose our training data have 2 features \(X_1\) and \(X2\), the contour graph can be used for this visualization. The contour graph is a \(2d\) representation of \(3d\) surface. \(X_1\) and \(X_2\) are the features in the \(X\) and \(Y\) axis respectively and bumps (\(3^{rd}\) surface) represents a loss of the network given \(X_1\), \(X_2\) values. The peak represents high loss and base represents low. These gradients try to move to global minima which is the lowest point of the surface. Thus we aim to go downward.
-<br><br>
+Mathematically these gradients are vectors that move in a specific direction to reduce the loss of the network.
+If we suppose our training data have 2 features \(X_1\) and \(X2\), the contour graph can be used for this visualization. The contour graph is a \(2d\) representation of \(3d\) surface. \(X_1\) and \(X_2\) are the features in the \(X\) and \(Y\) axis respectively and bumps (\(3^{rd}\) surface) represents a loss of the network given \(X_1\), \(X_2\) values. The peak represents high loss and base represents low. These gradients try to move to global minima which is the lowest point of the surface. Thus we aim to go downward.</p>
+<br>
+<center>
+     <img src="http://localhost:4000/img/backpropagation/contour.PNG" class="img-responsive" height="60%" width="60%">
+     <caption>figure 4. A contour graph from 3d surface.</caption>
+</center>
+<br>
+<p>
 Our gradient is a vector which is a slope of the surface. As slope \( m = \frac{y}{x} \), we do the same calculation in finding the derivative. Hence It is simply a slope. So we keep finding the slope of the surface, update our values and move along the downward direction. 
 </p>
 <br>
@@ -286,6 +293,14 @@ The reason we subtract the \(W_{\Delta}\) from the current value is that we need
 Let's take an example of \(m = 2x\). \( \frac{\partial m}{\partial x} = 2 \) which is the gradient. Now increasing \(x\) by \(2\) will always increase the value of \(m\). Therefore we subtract it from the current value.
 </p>
 <br>
+<h2>Adding Learning rate</h2>
+<p>As we saw earlier, after we find \(W_{\Delta}\) and \(B_{\Delta}\), we subtract it from \(W_{current}\) and \(B_{current}\) respectively  in order to reduce the loss for next iteration. Consider that as a jump from value \(A\) to \(B\). To control the proportion of this jump, we use the <b  style="color: #1abc9c;">learning rate</b>. Using it, we can set how much slow or fast we want our loss to converge. So basically, the learning rate is multiplied with \( \Delta \) values as follows:</p>
+<h4>
+    $$ W_{new} = W_{current} -  ( \text{learning rate} \times W_{\Delta} ) $$
+    $$ B_{new} = B_{current} -  ( \text{learning rate} \times B_{\Delta} ) $$
+</h4>
+<p> Usually we keep \(0.01\) or \(0.001\) as learning rate, but it differs on many other factors such as dataset.</p>
+<br>
 <h2>steps of the neural network</h2>
 <p>
 iterate \(n\) times:  <br>
@@ -297,7 +312,7 @@ iterate \(n\) times:  <br>
 
 <br>
 <h2>Conclusion</h2>
-<p>This is all about backpropagation. In the upcoming posts, I will show you how to program a simple neural network from scratch and then using higher-level libraries.</p>
+<p>This is all about backpropagation. While programming backpropagation, the formula is structured a bit differently in order to do mathematial operations like \( \text{dot product}\) and few others. In the upcoming posts, I will show you how to program a simple neural network from scratch and then using higher-level libraries. </p>
                                 
 
                
